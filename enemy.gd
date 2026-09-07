@@ -5,7 +5,7 @@ extends RigidBody2D
 @export var player: Node2D
 
 
-
+var explosion_scene = preload("res://animated_sprite_2d.tscn")
 var cannonball_scene = preload("res://enemy_cannonball.tscn")
 
 var health = 100
@@ -73,9 +73,13 @@ func _physics_process(delta: float) -> void:
 	#check om blivet skudt
 	for body in get_colliding_bodies():
 		if body.is_in_group("cannonball"):
-			health -= 10
+			health -= player_skib.cannonball_damage
 			print(health)
 			if health <= 0:
+				var explosion = explosion_scene.instantiate()
+				explosion.global_position = global_position
+				explosion.scale = Vector2(1,1)
+				get_tree().current_scene.add_child(explosion)
 				queue_free()
 
 func _ready() -> void:

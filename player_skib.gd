@@ -4,9 +4,10 @@ var speed = 100
 var rSpeed = 1
 var drag = -0.4
 var cannonball_speed = 200
-var reload_speed = 0.3
+var reload_speed = 1
 var reloading = false
 var health = 100
+var cannonball_damage = 20
 
 var cannonball_scene = preload("res://cannonball.tscn")
 

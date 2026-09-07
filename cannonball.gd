@@ -14,6 +14,7 @@ func _physics_process(delta: float) -> void:
 		if body.is_in_group("hitable") and !body.is_in_group("player"):
 			var explosion = explosion_scene.instantiate()
 			explosion.global_position = global_position
+			explosion.scale = Vector2(0.3,0.3)
 			get_tree().current_scene.add_child(explosion)
 			queue_free()
 	lifespan -= delta

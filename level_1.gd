@@ -2,10 +2,10 @@ extends Node2D
 @onready var player_skib = $player_skib
 var enemy_scene = preload("res://enemy.tscn")
 
-var enemy_spawn_rate = 5
-var enemy_max = 10
+var enemy_spawn_rate = 2
+var enemy_max = 20
 var enemy_amount = 0
-var enemy_spawn_distance = 1000
+var enemy_spawn_distance = 700
 var rng = RandomNumberGenerator.new()
 var time_till_spawn = enemy_spawn_rate
 
