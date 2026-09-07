@@ -14,6 +14,7 @@ func spawn_enemy():
 		var enemy = enemy_scene.instantiate()
 		get_tree().current_scene.add_child(enemy)
 		enemy.global_position = player_skib.global_position + Vector2.UP.rotated(rng.randf_range(0,1)*2*PI)*enemy_spawn_distance
+		enemy_amount += 1
 		
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
