@@ -8,9 +8,9 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_rq2k3"]
 radius = 5.0990195
 
-[node name="enemy_cannonball" type="RigidBody2D" unique_id=221128626 groups=["enemy_cannonball", "hitable"]]
+[node name="enemy_cannonball" type="RigidBody2D" unique_id=221128626 groups=["enemy_cannonball"]]
 collision_layer = 16
-collision_mask = 11
+collision_mask = 9
 mass = 0.1
 physics_material_override = SubResource("PhysicsMaterial_rq2k3")
 gravity_scale = 0.0

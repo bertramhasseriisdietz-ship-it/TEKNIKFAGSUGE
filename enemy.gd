@@ -74,7 +74,6 @@ func _physics_process(delta: float) -> void:
 	for body in get_colliding_bodies():
 		if body.is_in_group("cannonball"):
 			health -= player_skib.cannonball_damage
-			print(health)
 			if health <= 0:
 				var explosion = explosion_scene.instantiate()
 				explosion.global_position = global_position
