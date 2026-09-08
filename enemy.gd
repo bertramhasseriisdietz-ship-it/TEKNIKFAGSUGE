@@ -1,7 +1,7 @@
 extends RigidBody2D
 @onready var player_skib = $"../player_skib"
 @onready var navigation_agent: NavigationAgent2D = $navigation/NavigationAgent2D
-@onready var level_1 = $Level1
+@onready var level_1 = $".."
 @export var player: Node2D
 
 
@@ -80,7 +80,7 @@ func _physics_process(delta: float) -> void:
 				explosion.global_position = global_position
 				explosion.scale = Vector2(1,1)
 				get_tree().current_scene.add_child(explosion)
-				level_1_scene.enemy_amount -= 1
+				level_1.enemy_amount -= 1
 				queue_free()
 
 func _ready() -> void:
