@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://xhr3ci5ft8d"]
+
+[ext_resource type="Texture2D" uid="uid://bugiij63ulghf" path="res://icon.svg" id="1_0fbet"]
+
+[node name="Control" type="Control" unique_id=877518023]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1970546600]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 647.0
+texture = ExtResource("1_0fbet")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=845563979]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
