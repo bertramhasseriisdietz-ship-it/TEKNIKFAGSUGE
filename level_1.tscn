@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://lqwb46jlkwf0" path="res://tilemap_packed.png" id="1_3hls8"]
 [ext_resource type="Script" uid="uid://colqtt3oknisn" path="res://level_1.gd" id="1_ihfcg"]
 [ext_resource type="PackedScene" uid="uid://ctrs24ww00aoh" path="res://player_skib.tscn" id="3_hn12h"]
+[ext_resource type="Resource" uid="uid://cdasp2gx8qg2u" path="res://inventory/player_inv.tres" id="3_j7kpp"]
 [ext_resource type="PackedScene" uid="uid://yu73gnoguins" path="res://enemy.tscn" id="4_ihfcg"]
 [ext_resource type="Texture2D" uid="uid://cuccr803unsq3" path="res://healthbarUnder.png" id="5_j7kpp"]
 [ext_resource type="Script" uid="uid://bu71doe421ssl" path="res://health_bar.gd" id="5_rka8t"]
@@ -320,8 +321,7 @@ sources/0 = SubResource("TileSetAtlasSource_hbghi")
 script = ExtResource("1_ihfcg")
 
 [node name="player_skib" parent="." unique_id=805400101 instance=ExtResource("3_hn12h")]
-
-[node name="Camera2D2" type="Camera2D" parent="player_skib" unique_id=1817647036]
+inv = ExtResource("3_j7kpp")
 
 [node name="enemy" parent="." unique_id=42896431 instance=ExtResource("4_ihfcg")]
 position = Vector2(330, 128)
