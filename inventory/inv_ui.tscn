@@ -2,20 +2,55 @@
 
 [ext_resource type="Script" uid="uid://vl0wjkfu2665" path="res://inv_ui.gd" id="1_f2u1w"]
 [ext_resource type="Texture2D" uid="uid://d4kutkyoolutw" path="res://inventory/inventory-background.png" id="2_w82yi"]
+[ext_resource type="PackedScene" uid="uid://bxhhu6lyliwt4" path="res://inventory/inv_ui_slot.tscn" id="3_dn3an"]
 
 [node name="Inv_UI" type="Control" unique_id=1949832455]
+custom_minimum_size = Vector2(217, 144)
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 217.0
+offset_bottom = 144.0
 script = ExtResource("1_f2u1w")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1549080397]
 layout_mode = 0
-offset_right = 301.0
-offset_bottom = 112.0
+offset_right = 218.0
+offset_bottom = 145.0
 texture = ExtResource("2_w82yi")
 patch_margin_left = 6
 patch_margin_top = 6
 patch_margin_right = 6
 patch_margin_bottom = 6
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect" unique_id=1824665365]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -66.0
+offset_right = 100.0
+offset_bottom = 66.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="Inv_Ui_slot" parent="NinePatchRect/GridContainer" unique_id=1922200910 instance=ExtResource("3_dn3an")]
+layout_mode = 2
+
+[node name="Inv_Ui_slot2" parent="NinePatchRect/GridContainer" unique_id=1923626707 instance=ExtResource("3_dn3an")]
+layout_mode = 2
+
+[node name="Inv_Ui_slot3" parent="NinePatchRect/GridContainer" unique_id=2054203615 instance=ExtResource("3_dn3an")]
+layout_mode = 2
+
+[node name="Inv_Ui_slot4" parent="NinePatchRect/GridContainer" unique_id=54595198 instance=ExtResource("3_dn3an")]
+layout_mode = 2
+
+[node name="Inv_Ui_slot5" parent="NinePatchRect/GridContainer" unique_id=251396690 instance=ExtResource("3_dn3an")]
+layout_mode = 2
+
+[node name="Inv_Ui_slot6" parent="NinePatchRect/GridContainer" unique_id=966595502 instance=ExtResource("3_dn3an")]
+layout_mode = 2
