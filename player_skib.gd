@@ -1,5 +1,7 @@
 extends RigidBody2D
 
+@export var inv: Inv
+
 signal healthChanged
 
 var speed = 100
@@ -13,6 +15,7 @@ var cannonball_damage = 20
 var cannonball_scene = preload("res://cannonball.tscn")
 
 var maxHealth = 100
+@onready var anim = $"../CanvasLayer/Pain/AnimationPlayer"
 
 func _ready() -> void:
 	contact_monitor = true
@@ -50,6 +53,7 @@ func _physics_process(delta: float) -> void:
 	for body in get_colliding_bodies():
 		if body.is_in_group("enemy_cannonball"):
 			health -= body.damage
+			anim.play("Damage_flash")
 			healthChanged.emit()
 			print(health)
 			if health <= 0:
