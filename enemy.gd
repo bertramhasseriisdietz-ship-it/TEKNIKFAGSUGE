@@ -20,6 +20,7 @@ var direction = Vector2.UP
 var angle_to_player
 var desired_rotation
 var distance = Vector2.ZERO
+var damage = 10
 
 
 func shoot():
@@ -27,7 +28,7 @@ func shoot():
 		var cannonball = cannonball_scene.instantiate()
 
 		cannonball.global_position = position
-		
+		cannonball.damage = damage
 		get_tree().current_scene.add_child(cannonball)
 		cannonball.rotation = rotation+deg_to_rad(90)
 		cannonball.linear_velocity = Vector2.UP.rotated(cannonball.rotation)*cannonball_speed+linear_velocity
