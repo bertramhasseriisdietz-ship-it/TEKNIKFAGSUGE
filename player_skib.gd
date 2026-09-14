@@ -1,5 +1,7 @@
 extends RigidBody2D
 
+signal healthChanged
+
 var speed = 100
 var rSpeed = 1
 var drag = -0.4
@@ -10,6 +12,7 @@ var health = 100
 var cannonball_damage = 20
 var cannonball_scene = preload("res://cannonball.tscn")
 
+var maxHealth = 100
 
 func _ready() -> void:
 	contact_monitor = true
@@ -46,4 +49,8 @@ func _physics_process(delta: float) -> void:
 		angular_velocity = rSpeed
 	for body in get_colliding_bodies():
 		if body.is_in_group("enemy_cannonball"):
-			health -= 10
+			health -= body.damage
+			healthChanged.emit()
+			print(health)
+			if health <= 0:
+				get_tree().reload_current_scene()
