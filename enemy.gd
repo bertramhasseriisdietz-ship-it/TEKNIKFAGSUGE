@@ -2,7 +2,6 @@ extends RigidBody2D
 @onready var player_skib = $"../player_skib"
 @onready var navigation_agent: NavigationAgent2D = $navigation/NavigationAgent2D
 @onready var level_1 = $".."
-@export var player: Node2D
 
 
 var explosion_scene = preload("res://animated_sprite_2d.tscn")
